@@ -9,13 +9,23 @@
         body {background:#0c0f0a; color:#e5ffe5; overflow-x:hidden;}
         header {height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; background:linear-gradient(135deg,#0c0f0a,#113a1b); position:relative;}
 
-        /* === LOGO === */
+        /* === LOGO Z NEONOWĄ POŚWIATĄ === */
         .logo {
             width: 140px;
             height: auto;
             margin-bottom: 20px;
-            animation: fadeIn 1.2s ease;
+            animation: fadeIn 1.2s ease, glow 2.5s infinite alternate ease-in-out;
+            filter: drop-shadow(0 0 12px #1aff62) drop-shadow(0 0 22px #1aff62);
             user-select: none;
+        }
+
+        @keyframes glow {
+            from {
+                filter: drop-shadow(0 0 6px #1aff62) drop-shadow(0 0 15px #1aff62);
+            }
+            to {
+                filter: drop-shadow(0 0 18px #1aff62) drop-shadow(0 0 35px #1aff62);
+            }
         }
 
         h1 {font-size:4rem; letter-spacing:2px; animation:fadeIn 1.6s ease;}    
@@ -41,8 +51,8 @@
 <body>
     <header>
 
-        <!-- === TU WKLEJ SWOJE LOGO === -->
-        <img src="https://tse3.mm.bing.net/th/id/OIP.3tJR7EwBwMNrXieIXYhAjAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Logo serwera" class="logo">
+        <!-- === LOGO Z NEONOWĄ POŚWIATĄ === -->
+        <img src="https://static.planetminecraft.com/files/image/minecraft/data-pack/2023/347/16897475-pack_l.webp" alt="Logo serwera" class="logo">
 
         <h1>LifeStealLv2</h1>
         <p class="subtitle">Najlepsza przygoda zaczyna się tutaj</p>
