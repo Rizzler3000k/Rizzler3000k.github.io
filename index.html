@@ -8,23 +8,42 @@
         * {margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', sans-serif;}
         body {background:#0c0f0a; color:#e5ffe5; overflow-x:hidden;}
         header {height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; background:linear-gradient(135deg,#0c0f0a,#113a1b); position:relative;}
+
+        /* === LOGO === */
+        .logo {
+            width: 140px;
+            height: auto;
+            margin-bottom: 20px;
+            animation: fadeIn 1.2s ease;
+            user-select: none;
+        }
+
         h1 {font-size:4rem; letter-spacing:2px; animation:fadeIn 1.6s ease;}    
         p.subtitle {font-size:1.3rem; opacity:0.8; animation:fadeIn 2.3s ease;}  
         .ip-box {margin-top:20px; padding:10px 25px; border:2px solid #1aff62; border-radius:8px; cursor:pointer; transition:0.3s; animation:fadeIn 3s ease;}
         .ip-box:hover {background:#1aff62; color:black;}
+
         section {padding:80px 10%;}
         h2 {font-size:2.5rem; margin-bottom:20px; color:#1aff62;}
         .features {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px;}
+
         .card {background:#101510; padding:25px; border:1px solid #1aff62; border-radius:12px; transition:transform 0.3s, box-shadow 0.3s;}
         .card:hover {transform:translateY(-6px); box-shadow:0 0 20px #1aff6270;}
+
         footer {text-align:center; padding:40px; background:#0c0f0a; border-top:1px solid #1aff62;}
 
         @keyframes fadeIn {
-            from {opacity:0; transform:translateY(20px);} to {opacity:1; transform:translateY(0);} }
+            from {opacity:0; transform:translateY(20px);} 
+            to {opacity:1; transform:translateY(0);} 
+        }
     </style>
 </head>
 <body>
     <header>
+
+        <!-- === TU WKLEJ SWOJE LOGO === -->
+        <img src="https://tse3.mm.bing.net/th/id/OIP.3tJR7EwBwMNrXieIXYhAjAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Logo serwera" class="logo">
+
         <h1>LifeStealLv2</h1>
         <p class="subtitle">Najlepsza przygoda zaczyna się tutaj</p>
         <div class="ip-box" onclick="copyIP()">Kliknij, aby skopiować IP serwera</div>
